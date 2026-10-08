@@ -1,0 +1,26 @@
+[
+  {
+    "file": "domain/TaxRate.java",
+    "decorator": "✓"
+  },
+  {
+    "file": "domain/InvoiceStatus.java",
+    "decorator": "✓"
+  },
+  {
+    "file": "domain/InvoiceEntry.java",
+    "decorator": "👀"
+  },
+  {
+    "file": "domain/Invoice.java",
+    "decorator": "👀"
+  },
+  {
+    "file": "domain/Currency.java",
+    "decorator": "✓"
+  },
+  {
+    "file": "domain/LogEntry.java",
+    "decorator": "👀"
+  }
+]

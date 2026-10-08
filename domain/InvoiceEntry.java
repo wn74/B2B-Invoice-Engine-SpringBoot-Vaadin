@@ -5,6 +5,7 @@ import java.math.RoundingMode;
 import java.util.UUID;
 
 //TODO
+
 // [] NULL HANDLING
 // [] JPA ANNOTATIONS
 
