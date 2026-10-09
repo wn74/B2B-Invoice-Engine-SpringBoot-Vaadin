@@ -22,5 +22,45 @@
   {
     "file": "domain/Invoice.java",
     "decorator": "✓"
+  },
+  {
+    "file": "src/main/java/com/wn74/invoice_compliance_engine/domain/Currency.java",
+    "decorator": "✓"
+  },
+  {
+    "file": "src/main/java/com/wn74/invoice_compliance_engine/domain/Invoice.java",
+    "decorator": "✓"
+  },
+  {
+    "file": "src/main/java/com/wn74/invoice_compliance_engine/domain/InvoiceEntry.java",
+    "decorator": "✓"
+  },
+  {
+    "file": "src/main/java/com/wn74/invoice_compliance_engine/domain/InvoiceStatus.java",
+    "decorator": "✓"
+  },
+  {
+    "file": "src/main/java/com/wn74/invoice_compliance_engine/domain/LogEntry.java",
+    "decorator": "✓"
+  },
+  {
+    "file": "src/main/java/com/wn74/invoice_compliance_engine/domain/TaxRate.java",
+    "decorator": "✓"
+  },
+  {
+    "file": "src/main/java/com/wn74/invoice_compliance_engine/repository/InvoiceRepository.java",
+    "decorator": "✓"
+  },
+  {
+    "file": "src/main/java/com/wn74/invoice_compliance_engine/repository/LogRepository.java",
+    "decorator": "✗"
+  },
+  {
+    "file": "src/main/java/com/wn74/invoice_compliance_engine/service/InvoiceService.java",
+    "decorator": "✗"
+  },
+  {
+    "file": "src/main/java/com/wn74/invoice_compliance_engine/service/InvoiceValidator.java",
+    "decorator": "✗"
   }
 ]
