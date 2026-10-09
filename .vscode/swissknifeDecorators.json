@@ -8,10 +8,6 @@
     "decorator": "✓"
   },
   {
-    "file": "domain/InvoiceEntry.java",
-    "decorator": "👀"
-  },
-  {
     "file": "domain/Invoice.java",
     "decorator": "👀"
   },
@@ -21,6 +17,10 @@
   },
   {
     "file": "domain/LogEntry.java",
-    "decorator": "👀"
+    "decorator": "✓"
+  },
+  {
+    "file": "domain/InvoiceEntry.java",
+    "decorator": "✓"
   }
 ]
