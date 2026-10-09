@@ -4,26 +4,45 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.UUID;
 
+import jakarta.persistence.*;
+
 //TODO
 
 // [] NULL HANDLING
 // [] JPA ANNOTATIONS
+
+@Entity
+@Table(name = "invoiceEntries")
 
 public class InvoiceEntry{
     private static final int SCALE_INTERMEDIATE = 4;
     private static final int SCALE_FINAL = 2;
     private static final RoundingMode ROUNDING = RoundingMode.HALF_UP;
 
+    @Id
     private UUID entryId = UUID.randomUUID();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "invoice_id") 
     private Invoice invoice;
     private String productName;
     
+    @Column(nullable = false, precision = 15, scale = 2)
     private BigDecimal quantity;
+
+    @Enumerated(EnumType.STRING)
     private TaxRate taxRate;
+
+    @Column(nullable = false, precision = 15, scale = 2)
     private BigDecimal unitPrice;
 
+    @Column(nullable = false, precision = 15, scale = 2)
     private BigDecimal totalNetAmount;
+
+    @Column(nullable = false, precision = 15, scale = 2)
     private BigDecimal totalGrossAmount;
+
+    @Column(nullable = false, precision = 15, scale = 2)
     private BigDecimal taxAmount;
 
     

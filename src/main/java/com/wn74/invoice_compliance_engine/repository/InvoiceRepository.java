@@ -1,8 +1,9 @@
 package com.wn74.invoice_compliance_engine.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-
-public interface InvoiceRepository {
+public interface InvoiceRepository extends JpaRepository, JpaSpecificationExecutor{
 
     
 

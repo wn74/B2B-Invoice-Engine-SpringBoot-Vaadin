@@ -1,32 +1,54 @@
 package com.wn74.invoice_compliance_engine.domain;
 
+import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-
+@Entity
+@Table(name = "invoices")
 
 public class Invoice {
 
+    @Id
     private UUID invoiceId = UUID.randomUUID();
+
     private String invoiceNumber;
+
     private String supplierName;
+
     private String supplierTaxId;
+
     private String customerName;
     
+    @Enumerated(EnumType.STRING)
     private Currency currency; 
 
+    
     private LocalDate issueDate = LocalDate.now();
+
     private LocalDate dueDate;
 
-    
+    @Enumerated(EnumType.STRING)
     private InvoiceStatus status = InvoiceStatus.DRAFT;
+
+
+    @OneToMany(
+        mappedBy = "invoice",
+        cascade = CascadeType.ALL, 
+        orphanRemoval = true      
+    )
     private List<InvoiceEntry> invoiceEntries = new ArrayList<>();
 
+    @Column(nullable = false, precision = 15, scale = 2)
     private  BigDecimal subtotal;
+
+    @Column(nullable = false, precision = 15, scale = 2)
     private  BigDecimal totalTax;
+
+    @Column(nullable = false, precision = 15, scale = 2)
     private  BigDecimal grandTotal;
 
     public Invoice(){}

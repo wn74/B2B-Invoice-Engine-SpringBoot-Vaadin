@@ -3,13 +3,22 @@ package com.wn74.invoice_compliance_engine.domain;
 import java.time.Instant;
 import java.util.UUID;
 
+import jakarta.persistence.*;
+
 public class LogEntry {
     
+
+    @Id
     private UUID entryId = UUID.randomUUID();
+
     private Instant date = Instant.now();
+
     private UUID invoiceId;
+    
     private String action;
     private String reason;
+
+    @Enumerated(EnumType.STRING)
     private InvoiceStatus resultStatus;
 
     //JPA constructor

@@ -1,4 +1,7 @@
 package com.wn74.invoice_compliance_engine.repository;
-public class LogRepository {
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LogRepository extends JpaRepository {
     
 }
