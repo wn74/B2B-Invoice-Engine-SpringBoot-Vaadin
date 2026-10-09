@@ -54,7 +54,7 @@ public class Invoice {
     public void recalculateTotals(){
         BigDecimal calculatedSubtotal = BigDecimal.ZERO.setScale(2);
         BigDecimal calculatedTax = BigDecimal.ZERO.setScale(2);
-        BigDecimal grandTotal = BigDecimal.ZERO.setScale(2);
+        this.grandTotal = BigDecimal.ZERO.setScale(2);
         
 
         for (InvoiceEntry entry : this.invoiceEntries) {
