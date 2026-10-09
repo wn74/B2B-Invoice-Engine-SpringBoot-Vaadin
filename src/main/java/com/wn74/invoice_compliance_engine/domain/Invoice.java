@@ -1,4 +1,4 @@
-package domain;
+package com.wn74.invoice_compliance_engine.domain;
 
 import java.util.ArrayList;
 import java.util.List;
