@@ -1,18 +1,21 @@
 package com.wn74.invoice_compliance_engine.repository;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
-import org.springframework.cglib.core.Local;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-public interface InvoiceRepository extends JpaRepository, JpaSpecificationExecutor{
+import com.wn74.invoice_compliance_engine.domain.Invoice;
+
+public interface InvoiceRepository extends JpaRepository<Invoice, UUID>, JpaSpecificationExecutor<Invoice>{
 
     
-    public boolean existsBySupplierTaxIdAndInvoiceNumberAndIssueDateAfter (
+    public boolean existsBySupplierTaxIdAndInvoiceNumberAndIssueDateAfterAndInvoiceIdNot (
         String supplierTaxId,
         String invoiceNumber,
-        LocalDate cutoffDate
+        LocalDate cutoffDate,
+        UUID invoiceId
     );
 
 }

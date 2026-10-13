@@ -43,13 +43,13 @@ public class Invoice {
     private List<InvoiceEntry> invoiceEntries = new ArrayList<>();
 
     @Column(nullable = false, precision = 15, scale = 2)
-    private  BigDecimal subtotal;
+    private  BigDecimal subtotal = BigDecimal.ZERO.setScale(2);
 
     @Column(nullable = false, precision = 15, scale = 2)
-    private  BigDecimal totalTax;
+    private  BigDecimal totalTax = BigDecimal.ZERO.setScale(2);
 
     @Column(nullable = false, precision = 15, scale = 2)
-    private  BigDecimal grandTotal;
+    private  BigDecimal grandTotal = BigDecimal.ZERO.setScale(2);
 
     public Invoice(){}
 

@@ -5,13 +5,16 @@ import java.util.UUID;
 
 import jakarta.persistence.*;
 
+
+@Entity
+@Table(name = "audit_log_entries")
 public class LogEntry {
     
 
     @Id
     private UUID entryId = UUID.randomUUID();
 
-    private Instant date = Instant.now();
+    private Instant logDate = Instant.now();
 
     private UUID invoiceId;
     
@@ -41,8 +44,8 @@ public class LogEntry {
     public UUID getInvoiceId() {
         return invoiceId;
     }
-    public Instant getDate() {
-        return date;
+    public Instant getLogDate() {
+        return logDate;
     }
     public String getAction() {
         return action;
@@ -81,7 +84,7 @@ public class LogEntry {
 
     @Override
     public String toString() {
-        return "LogEntry [entryId=" + entryId + ", date=" + date + ", invoiceId=" + invoiceId + ", action=" + action
+        return "LogEntry [entryId=" + entryId + ", date=" + logDate + ", invoiceId=" + invoiceId + ", action=" + action
                 + ", reason=" + reason + ", resultStatus=" + resultStatus + "]";
     }
 
