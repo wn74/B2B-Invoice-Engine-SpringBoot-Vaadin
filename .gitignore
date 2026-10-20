@@ -32,3 +32,40 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Compiled & Build Outputs ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Vaadin Frontend Generated Files ###
+frontend/generated/
+src/main/frontend/generated/
+node/
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+vite.generated.ts
+types.d.ts
+
+### IDE Specific Files ###
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+*.swp
+*.bak
+.settings/
+.project
+.classpath
+
+### OS Specific ###
+.DS_Store
+Thumbs.db
+desktop.ini
+
+### Logs & Env ###
+*.log
+.env
